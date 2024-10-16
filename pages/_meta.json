@@ -5,10 +5,15 @@
     "title": "About",
     "type": "page"
   },
+  "ml": "ML",
+  "software": "Software SDK",
+  "develop": "Develop",
+  "contribute": "Contribute",
+
   "contact": {
     "title": "Contact ↗",
     "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true
-  }
+}
 }

@@ -1,11 +1,5 @@
 {
-  "runtime": "Runtime",
-  "firmware": "Firmware",
-
-  "simulation": {
-    "title": "Simulation",
-    "type": "page",
-    "href": "https://docs.kscale.dev/software/simulation/isaac",
-    "newWindow": true
-  }
+    "bom": "Bill of Materials",
+    "assembly_guide": "Assembly Guide",
+    "autonomy_stack": "Autonomy Stack"
 }
