@@ -1,5 +1,5 @@
 {
     "bom": "Bill of Materials",
     "assembly_guide": "Assembly Guide",
-    "autonomy_stack": "Autonomy Stack"
+    "runtime": "Runtime"
 }

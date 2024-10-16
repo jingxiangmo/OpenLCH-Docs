@@ -1,15 +1,15 @@
 {
   "index": "Home",
   "build": "Build",
+  "software": "Software SDK",
+  "ml": "ML/RL",
+  "develop": "Develop",
+  "contribute": "Contribute",
+  
   "about": {
     "title": "About",
     "type": "page"
   },
-  "ml": "ML",
-  "software": "Software SDK",
-  "develop": "Develop",
-  "contribute": "Contribute",
-
   "contact": {
     "title": "Contact ↗",
     "type": "page",
