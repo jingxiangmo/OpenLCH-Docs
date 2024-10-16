@@ -1,0 +1,11 @@
+{
+  "runtime": "Runtime",
+  "firmware": "Firmware",
+
+  "simulation": {
+    "title": "Simulation",
+    "type": "page",
+    "href": "https://docs.kscale.dev/software/simulation/isaac",
+    "newWindow": true
+  }
+}
