@@ -5,18 +5,20 @@ variables:
 
 cache:
   paths:
-    - node_modules/
+    - .pnpm-store
 
 stages:
   - build_docs
   - build_docker
-  - deploy
 
 build_docs:
   stage: build_docs
+  before_script:
+    - npm install -g pnpm
+    - pnpm config set store-dir .pnpm-store
   script:
-    - npm install
-    - npm run build
+    - pnpm install
+    - pnpm run build
   artifacts:
     paths:
       - .next/
