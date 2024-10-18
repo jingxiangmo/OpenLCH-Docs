@@ -35,21 +35,27 @@ build_docker:
       cat <<EOF > Dockerfile
       FROM node:18-alpine AS builder
       WORKDIR /app
+      RUN apk add --no-cache libc6-compat
+      RUN npm install -g pnpm
       COPY package*.json ./
-      RUN npm install
+      RUN pnpm install
       COPY . .
-      RUN npm run build
+      RUN if [ ! -f next.config.js ]; then echo "const withNextra = require('nextra')({ theme: 'nextra-theme-docs', themeConfig: './theme.config.js' }); module.exports = withNextra();" > next.config.js; fi
+      RUN pnpm run build
 
       FROM node:18-alpine
       WORKDIR /app
+      RUN apk add --no-cache libc6-compat
+      RUN npm install -g pnpm
       COPY --from=builder /app/package*.json ./
       COPY --from=builder /app/.next ./.next
       COPY --from=builder /app/public ./public
       COPY --from=builder /app/node_modules ./node_modules
+      COPY --from=builder /app/next.config.js ./next.config.js
       
       ENV NODE_ENV production
       
-      CMD ["npm", "start"]
+      CMD ["pnpm", "start"]
       EOF
     - docker build --pull -t $DOCS_IMAGE:$CI_COMMIT_REF_SLUG -t $DOCS_IMAGE:latest .
     - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
