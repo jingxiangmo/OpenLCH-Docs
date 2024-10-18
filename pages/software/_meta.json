@@ -1,4 +1,8 @@
 {
-"sdk": "SDK Setup",
-"APIs": "APIs"
-}
+"cli": "CLI",
+"api": {
+    "title": "APIs",
+    "type": "page",
+    "href": "https://docs.zeroth.bot/python/openlch/hal.html",
+    "newWindow": true
+}}
