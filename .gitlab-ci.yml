@@ -1,0 +1,56 @@
+image: node:18
+
+variables:
+  DOCS_IMAGE: $CI_REGISTRY_IMAGE/docs
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build_docs
+  - build_docker
+  - deploy
+
+build_docs:
+  stage: build_docs
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - .next/
+
+build_docker:
+  stage: build_docker
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  script:
+    - |
+      cat <<EOF > Dockerfile
+      FROM node:18-alpine AS builder
+      WORKDIR /app
+      COPY package*.json ./
+      RUN npm install
+      COPY . .
+      RUN npm run build
+
+      FROM node:18-alpine
+      WORKDIR /app
+      COPY --from=builder /app/package*.json ./
+      COPY --from=builder /app/.next ./.next
+      COPY --from=builder /app/public ./public
+      COPY --from=builder /app/node_modules ./node_modules
+      
+      ENV NODE_ENV production
+      
+      CMD ["npm", "start"]
+      EOF
+    - docker build --pull -t $DOCS_IMAGE:$CI_COMMIT_REF_SLUG -t $DOCS_IMAGE:latest .
+    - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
+    - docker push $DOCS_IMAGE:latest
+  only:
+    - main
