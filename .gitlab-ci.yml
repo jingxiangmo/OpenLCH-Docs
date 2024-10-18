@@ -35,7 +35,6 @@ build_docker:
       cat <<EOF > Dockerfile
       FROM node:18-alpine AS builder
       WORKDIR /app
-      RUN apk add --no-cache libc6-compat
       RUN npm install -g pnpm
       COPY package*.json ./
       RUN pnpm install
@@ -45,7 +44,6 @@ build_docker:
 
       FROM node:18-alpine
       WORKDIR /app
-      RUN apk add --no-cache libc6-compat
       RUN npm install -g pnpm
       COPY --from=builder /app/package*.json ./
       COPY --from=builder /app/.next ./.next
