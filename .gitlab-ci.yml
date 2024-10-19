@@ -59,7 +59,7 @@ build_docker:
       
       CMD ["pnpm", "start"]
       EOF
-    - docker build -t $DOCS_IMAGE:latest .
+    - docker build -t $DOCS_IMAGE:$CI_COMMIT_REF_SLUG -t $DOCS_IMAGE:latest .
     - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
     - docker push $DOCS_IMAGE:latest
   only:
