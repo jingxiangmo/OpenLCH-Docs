@@ -28,8 +28,8 @@ build_docker:
   image: docker:latest
   services:
     - docker:dind
-  # before_script:
-    # - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
   script:
     - |
       cat <<EOF > Dockerfile
@@ -60,7 +60,7 @@ build_docker:
       CMD ["pnpm", "start"]
       EOF
     - docker build -t $DOCS_IMAGE:latest .
-    # - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
-    # - docker push $DOCS_IMAGE:latest
+    - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
+    - docker push $DOCS_IMAGE:latest
   only:
     - main
