@@ -28,20 +28,22 @@ build_docker:
   image: docker:latest
   services:
     - docker:dind
-  before_script:
-    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  # before_script:
+    # - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
   script:
     - |
       cat <<EOF > Dockerfile
       FROM node:22.9.0-alpine AS builder
       WORKDIR /app
       RUN npm install -g pnpm@9.12.2
+      COPY pnpm-lock.yaml ./
       COPY package*.json ./
       RUN pnpm install
       COPY . .
       RUN pnpm list
       RUN node --version
       RUN pnpm --version
+      RUN ls -la
       RUN pnpm run build
 
       FROM node:22.9.0-alpine
@@ -57,8 +59,8 @@ build_docker:
       
       CMD ["pnpm", "start"]
       EOF
-    - docker build --pull -t $DOCS_IMAGE:$CI_COMMIT_REF_SLUG -t $DOCS_IMAGE:latest .
-    - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
-    - docker push $DOCS_IMAGE:latest
+    - docker build -t $DOCS_IMAGE:latest .
+    # - docker push $DOCS_IMAGE:$CI_COMMIT_REF_SLUG
+    # - docker push $DOCS_IMAGE:latest
   only:
     - main
