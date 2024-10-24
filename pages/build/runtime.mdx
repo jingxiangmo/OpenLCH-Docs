@@ -40,6 +40,12 @@ If you're connecting via USB, use the following details:
 SSH:
 `ssh root@192.168.42.1`
 
+
+If there's a keygen issue:
+`ssh-keygen -R 192.168.42.1`
+
+
+
 4. Build Runtime
 ```bash
 cargo check && gitlab-ci-local # check and build
