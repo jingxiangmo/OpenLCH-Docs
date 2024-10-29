@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/jingxiangmo/openlch-docs/tree/main',
   footer: {
-    text: 'OpenLCH, a K-Scale Labs project.',
+    text: 'OpenLCH, a Zeroth Robotics project.',
   },
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter();
