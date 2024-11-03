@@ -1,4 +1,4 @@
 {
-    "isaac_gym": "Isaac Gym",
-    "sim2real": "Sim2Real"
+  "rl": "Reinforcement Learning (RL)",
+  "evla": "EdgeVLA"
 }

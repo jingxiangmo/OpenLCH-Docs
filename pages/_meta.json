@@ -1,10 +1,13 @@
 {
   "index": "Home",
-  "build": "Build",
-  "software": "Software SDK",
+  "build": "GET STARTED",
+  "sdk": "SOFTWARE SDK",
+  "capabilities": "CAPABILITIES",
+  "simulation": "SIMULATION",
   "ml": "ML/RL",
-  "development": "Development",
-  "contribute": "Contribute",
+  "robot-apps": "ROBOT APPS",
+  "platform-infrastructure": "PLATFORM INFRASTRUCTURE",
+  "contribute": "CONTRIBUTE",
   
   "about": {
     "title": "About",

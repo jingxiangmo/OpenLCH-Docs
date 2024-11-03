@@ -1,5 +1,7 @@
 {
-    "bom": "Bill of Materials (BOM)",
-    "assembly_guide": "Assembly Guide",
-    "runtime": "Runtime"
+  "bom": "Bill of Materials (BOM)",
+  "assemble": "Assemble Robot",
+  "setup": "Setup Software",
+  "calibrate": "Calibrate Joints",
+  "run": "Start Walking"
 }
