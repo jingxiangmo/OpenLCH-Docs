@@ -8,6 +8,23 @@ This documentation is under construction and incomplete.
 
 Zero-01 platform has a 1080p camera mounted on the head of the robot.
 
+## Video Streaming
+OpenLCH SDK provides a function to start video streaming from the robot.
+
+```bash
+openlch start-video-stream
+openlch get-video-stream-urls
+```
+
+Currently, the video stream is available over RTSP, HLS, MSE and WebRTC.
+
+## Image Processing and Object Detection
+
+Neural acceleration is available via CVITEK's NPU. Here is a list of models tested by manufacturer:
+![Supported Neural Network Models](https://milkv.io/assets/images/duo-cv1800b-tpu-model_202307-97600da256223041fc004ef5a1f2fce9.png)
+
+To learn more about the neural acceleration, please refer to the [Milk-V documentation](https://milkv.io/docs/duo/application-development/tpu/tpu-introduction).
+
 ## Specifications
 
 ### Sensor Features
@@ -27,22 +44,6 @@ Zero-01 platform has a 1080p camera mounted on the head of the robot.
   - Horizontal: 67°
   - Vertical: 50°
 
-## Video Streaming
-OpenLCH SDK provides a function to start video streaming from the robot.
-
-```bash
-openlch start-video-stream
-openlch get-video-stream-urls
-```
-
-Currently, the video stream is available over RTSP, HLS, MSE and WebRTC.
-
-## Image Processing and Object Detection
-
-Neural acceleration is available via CVITEK's NPU. Here is a list of models tested by manufacturer:
-![Supported Neural Network Models](https://milkv.io/assets/images/duo-cv1800b-tpu-model_202307-97600da256223041fc004ef5a1f2fce9.png)
-
-To learn more about the neural acceleration, please refer to the [Milk-V documentation](https://milkv.io/docs/duo/application-development/tpu/tpu-introduction).
 
 ## Source Code
 
