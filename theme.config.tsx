@@ -3,6 +3,8 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router';
 import { useConfig } from 'nextra-theme-docs';
 
+const siteTitle = 'Zeroth Robotics Docs';
+
 const config: DocsThemeConfig = {
   logo: <span>Zeroth Robotics Docs</span>,
   project: {
@@ -13,7 +15,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/jingxiangmo/openlch-docs/tree/main',
   footer: {
-    text: 'Zeroth Robotics, made with ❤️ by JX, Denys, Kelsey, and friends.',
+    text: 'zeroth robotics, made with ❤️ by JX, Denys, Kelsey, and friends',
   },
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter();
@@ -22,12 +24,20 @@ const config: DocsThemeConfig = {
       'https://docs.zeroth.bot' +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
+    const isIndex = asPath === "/";
+    const title = frontMatter.title && !isIndex ? `${frontMatter.title} - ${siteTitle}` : siteTitle;
+
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:url" content={url} />
-        <meta property="og:title" content={'Zeroth Robotics Docs'} />
-        <meta property="og:description" content={'powerful, affordable, and open-source robotics platform for builders'} />
+        <meta property="og:title" content={frontMatter.title || siteTitle} />
+        <meta property="og:description" content={frontMatter.description || 'powerful, affordable, and open-source robotics platform for builders'} />
+
+        <meta property="og:site_name" content={siteTitle} />
+        <meta name="apple-mobile-web-app-title" content={siteTitle} />
+
+        <title>{title}</title>        
       </>
     );
   }
