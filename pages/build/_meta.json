@@ -4,5 +4,5 @@
   "assemble": "3. Robot Assembly Guide",
   "setup": "4. Software Installation and Setup",
   "calibrate": "5. Joints Calibration",
-  "run": "6. Initial Walking Sequence"
+  "run": "6. RL-based Walking Demo"
 }
