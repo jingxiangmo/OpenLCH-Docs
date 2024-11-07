@@ -33,11 +33,11 @@ const config: DocsThemeConfig = {
         <meta property="og:url" content={url} />
         <meta property="og:title" content={frontMatter.title || siteTitle} />
         <meta property="og:description" content={frontMatter.description || 'powerful, affordable, and open-source robotics platform for builders'} />
-
         <meta property="og:site_name" content={siteTitle} />
         <meta name="apple-mobile-web-app-title" content={siteTitle} />
-
-        <title>{title}</title>        
+        <meta name="description" content={frontMatter.description || 'powerful, affordable, and open-source robotics platform for builders'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <title>{title}</title>
       </>
     );
   }
