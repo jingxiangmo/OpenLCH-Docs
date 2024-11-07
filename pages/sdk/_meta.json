@@ -1,11 +1,5 @@
 {
   "overview": "Overview",
   "python-library": "Python Library",
-  "cli": "CLI",
-  "api": {
-    "title": "APIs",
-    "type": "page",
-    "href": "https://docs.zeroth.bot/python/openlch/hal.html",
-    "newWindow": true
-    }
-}   
+  "cli": "CLI"
+}
