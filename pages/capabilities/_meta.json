@@ -1,8 +1,8 @@
 {
   "vision": "Vision",
   "speech": "Speech",
-  "llm": "LLMs",
   "locomotion": "Locomotion",
   "manipulation": "Manipulation",
-  "teleop": "Teleoperation"
+  "teleop": "Teleoperation",
+  "llm": "LLMs"
 }

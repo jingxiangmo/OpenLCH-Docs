@@ -1,5 +1,6 @@
 {
   "bom": "Bill of Materials (BOM)",
+  "3d_print": "3D Printing Body",
   "assemble": "Assemble Robot",
   "setup": "Setup Software",
   "calibrate": "Calibrate Joints",
