@@ -1,8 +1,8 @@
 {
-  "bom": "Materials and Components (BoM)",
-  "3d_print": "3D Printing the Parts",
-  "assemble": "Robot Assembly Guide",
-  "setup": "Software Installation and Setup",
-  "calibrate": "Joints Calibration",
-  "run": "Initial Walking Sequence"
+  "bom": "1. Materials and Components (BoM)",
+  "3d_print": "2. 3D Printing the Parts",
+  "assemble": "3. Robot Assembly Guide",
+  "setup": "4. Software Installation and Setup",
+  "calibrate": "5. Joints Calibration",
+  "run": "6. Initial Walking Sequence"
 }
