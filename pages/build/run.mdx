@@ -9,18 +9,31 @@ This documentation is under construction and incomplete.
 
 Clone repository:
 ```bash
-git clone https://github.com/Zeroth-Robotics/OpenLCH
+git clone --recursive https://github.com/Zeroth-Robotics/OpenLCH
+cd OpenLCH
 ```
 
 Create conda environment:
+(install Mini Conda [here](https://docs.conda.io/en/latest/miniconda.html) if you haven't done it yet)
+
 ```bash
-conda create -n openlch python=3.10
-conda activate openlch
+conda create -n humanoid-os python=3.12
+conda activate humanoid-os
+```
+
+## Inference
+```bash
+cd Inference
+```
+
+Test if ping Milk-V is working:
+```bash
+ping 192.168.42.1
 ```
 
 Install dependencies:
 ```bash
-cd OpenLCH
 pip install -r requirements.txt
 ```
 
+Run inference:
