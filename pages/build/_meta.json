@@ -1,8 +1,8 @@
 {
-  "bom": "Bill of Materials (BOM)",
-  "3d_print": "3D Printing Body",
-  "assemble": "Assemble Robot",
-  "setup": "Setup Software",
-  "calibrate": "Calibrate Joints",
-  "run": "Start Walking"
+  "bom": "Materials and Components (BoM)",
+  "3d_print": "3D Printing the Parts",
+  "assemble": "Robot Assembly Guide",
+  "setup": "Software Installation and Setup",
+  "calibrate": "Joints Calibration",
+  "run": "Initial Walking Sequence"
 }
