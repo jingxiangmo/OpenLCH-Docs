@@ -18,17 +18,17 @@ Our PPO implementation follows this high-level algorithm:
 
 ```
 While not done:
-Collect experiences using current policy
-If update interval reached:
-Compute advantages and returns
-For each epoch:
-For each mini-batch:
-Compute policy ratio r = new*policy / old_policy
-Calculate L_clip = min(r * advantage, clip(r, 1-ε, 1+ε) _ advantage)
-Compute value loss L_vf and entropy bonus
-Loss = -L_clip + c1 _ L*vf - c2 * entropy
-Perform gradient update
-Clear experience buffer
+    Collect experiences using current policy
+    If update interval reached:
+        Compute advantages and returns
+        For each epoch:
+            For each mini-batch:
+                Compute policy ratio r = new*policy / old_policy
+                Calculate L_clip = min(r * advantage, clip(r, 1-ε, 1+ε) _ advantage)
+                Compute value loss L_vf and entropy bonus
+                Loss = -L_clip + c1 _ L*vf - c2 * entropy
+                Perform gradient update
+        Clear experience buffer
 ```
 
 Currently, our hyper parameters are:
