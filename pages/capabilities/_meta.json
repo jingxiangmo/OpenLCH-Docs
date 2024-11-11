@@ -3,6 +3,5 @@
   "speech": "Speech",
   "locomotion": "Locomotion",
   "manipulation": "Manipulation",
-  "teleop": "Teleoperation",
-  "llm": "LLMs"
+  "teleop": "Teleoperation"
 }

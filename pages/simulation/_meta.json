@@ -1,5 +1,8 @@
 {
-  "isaac_gym": "Isaac Gym",
-  "mujoco": "MuJoCo",
-  "pybullet": "PyBullet"
+  "contact": {
+    "title": "Isaac Gym",
+    "type": "page",
+    "href": "https://docs.kscale.dev/simulation/isaac",
+    "newWindow": true
+  }
 }

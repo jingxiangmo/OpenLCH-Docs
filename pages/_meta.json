@@ -5,10 +5,7 @@
   "capabilities": "CAPABILITIES",
   "simulation": "SIMULATION",
   "ml": "ML/RL",
-  "robot-apps": "ROBOT APPS",
-  "platform-infrastructure": "PLATFORM INFRASTRUCTURE",
   "contribute": "CONTRIBUTE",
-  
   "about": {
     "title": "About",
     "type": "page"
@@ -18,5 +15,5 @@
     "type": "page",
     "href": "https://twitter.com/jingxiangmo",
     "newWindow": true
-}
+  }
 }
