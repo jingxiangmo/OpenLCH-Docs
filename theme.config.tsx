@@ -8,7 +8,7 @@ const siteDescription = 'Powerful, affordable, and open-source robotics platform
 const siteUrl = 'https://docs.zeroth.bot';
 
 const config: DocsThemeConfig = {
-  logo: <span>[0] Docs</span>,
+  logo: <span>Zeroth Robotics Docs</span>,
   project: {
     link: 'https://github.com/Zeroth-Robotics/OpenLCH',
   },
