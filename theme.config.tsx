@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/Zeroth-Robotics/OpenLCH',
   },
   chat: {
-    link: 'https://discord.gg/aHTY4ur4',
+    link: 'https://discord.gg/G6KP76uha5',
   },
   docsRepositoryBase: 'https://github.com/jingxiangmo/openlch-docs/tree/main',
   footer: {
