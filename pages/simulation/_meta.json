@@ -1,5 +1,4 @@
 {
   "isaac_gym": "Isaac Gym",
-  "mujoco": "MuJoCo",
-  "pybullet": "PyBullet"
+  "mujoco": "MuJoCo"
 }
