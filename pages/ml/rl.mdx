@@ -76,21 +76,3 @@ For training the robot to walk, we have an additional set of rewards that are ad
 Additional rewards such as feet clearance and contact forces are crucial for achieving sim2real transfer and handling various real-world properties like friction coefficients. These rewards ensure the policy learns realistic locomotion patterns that can translate to physical robots. The action smoothness reward particularly helps generate commands that are feasible for real-world actuators to execute under typical PID control schemes.
 
 where $w_i$ is the weight for each additional reward component $r_i$, also defined in the configuration scales.
-
-### Complete Rewards
-
-The full complete reward function for our humanoid robot is a weighted sum of multiple components, each designed to encourage specific behaviours or penalize undesired ones. These components carefully balance the need for stable standing, realistic motion, and achievable actuation patterns. The total reward $R_{total}$ is calculated as:
-
-$$
-\begin{align*}
-R_{total} &= w_{\text{joint\_pos}} r_{\text{joint\_pos}} + w_{\text{feet\_distance}} r_{\text{feet\_distance}} + w_{\text{knee\_distance}} r_{\text{knee\_distance}} + w_{\text{foot\_slip}} r_{\text{foot\_slip}} \\
- &+ w_{\text{feet\_air\_time}} r_{\text{feet\_air\_time}} + w_{\text{feet\_contact\_number}} r_{\text{feet\_contact\_number}} + w_{\text{orientation}} r_{\text{orientation}} \\
- &+ w_{\text{feet\_contact\_forces}} r_{\text{feet\_contact\_forces}} + w_{\text{default\_joint\_pos}} r_{\text{default\_joint\_pos}} + w_{\text{base\_height}} r_{\text{base\_height}} \\
- &+ w_{\text{base\_acc}} r_{\text{base\_acc}} + w_{\text{vel\_mismatch}} r_{\text{vel\_mismatch}} + w_{\text{torques}} r_{\text{torques}} \\
- &+ w_{\text{dof\_vel}} r_{\text{dof\_vel}} + w_{\text{dof\_acc}} r_{\text{dof\_acc}} + w_{\text{collision}} r_{\text{collision}} \\
- &+ w_{\text{action\_smoothness}} r_{\text{action\_smoothness}} + w_{\text{feet\_clearance}} r_{\text{feet\_clearance}} \\
- &+ w_{\text{track\_vel}} r_{\text{track\_vel}} + w_{\text{low\_speed}} r_{\text{low\_speed}}  
-\end{align*}
-$$
-
-where $w_i$ is the weight for each reward component $r_i$, defined in the configuration scales.
