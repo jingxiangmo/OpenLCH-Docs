@@ -25,7 +25,8 @@ conda activate humanoid-os
 
 Install dependencies:
 ```bash
-pip install -r inference/requirements.txt
+pip install -r experiments/requirements.txt
+
 ```
 Test if ping Milk-V is working:
 ```bash
@@ -35,7 +36,8 @@ ping 192.168.42.1
 Run inference:
 
 ```bash
-python inference/main.py --model_path sim/examples/walking_micro.onnx
+python experiments/run.py
 ```
+
 
 

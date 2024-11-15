@@ -3,6 +3,5 @@
   "3d_print": "2. 3D Printing the Parts",
   "assemble": "3. Robot Assembly Guide",
   "setup": "4. Image Installation and Setup",
-  "calibrate": "5. Joints Calibration",
-  "run": "6. RL-based Walking Demo"
+  "run": "5. RL-based Walking Demo"
 }

@@ -1,4 +1,8 @@
 {
-  "isaac_gym": "Isaac Gym",
-  "mujoco": "MuJoCo"
+  "contact": {
+    "title": "Isaac Gym",
+    "type": "page",
+    "href": "https://docs.kscale.dev/simulation/isaac",
+    "newWindow": true
+  }
 }
