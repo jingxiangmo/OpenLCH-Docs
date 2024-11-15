@@ -1,12 +1,12 @@
 {
   "index": "HOME",
-  "humanoid-olympics": "HUMANOID OLYMPICS",
   "build": "GET STARTED",
   "sdk": "SOFTWARE SDK",
   "capabilities": "CAPABILITIES",
   "simulation": "SIMULATION",
   "ml": "ML/RL",
   "contribute": "CONTRIBUTE",
+  "humanoid-olympics": "HUMANOID OLYMPICS",
   "about": {
     "title": "About",
     "type": "page"
