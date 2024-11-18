@@ -4,8 +4,9 @@
   "sdk": "SOFTWARE SDK",
   "capabilities": "CAPABILITIES",
   "simulation": "SIMULATION",
-  "ml": "ML/RL",
+  "ml": "ML RESEARCH",
   "contribute": "CONTRIBUTE",
+  "humanoid-olympics": "HUMANOID OLYMPICS",
   "about": {
     "title": "About",
     "type": "page"
