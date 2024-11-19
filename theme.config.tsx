@@ -61,7 +61,7 @@ const config: DocsThemeConfig = {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32.png"
+          href="/favicon.ico"
         />
 
         <style>
