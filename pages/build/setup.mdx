@@ -1,19 +1,23 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
 
 <Callout type="warning" emoji="⚠️">
 This documentation is under construction and incomplete.
 </Callout>
+<Callout type="error" emoji="🚫">
+Public Alpha. Zeroth-01 Bot is available for basic demos, please expect breaking changes until 1.0 is reached.
+</Callout>
+# Image Installation and Setup
 
-## Image Installation and Setup
-
-1. Flash the Image to the SD Card
+<Steps>
+### Flash the Image to SD Card
 Download the OpenLCH image from the [releases page](https://github.com/Zeroth-Robotics/OpenLCH-buildroot/releases).
 
 Use Balena Etcher (or any other flashing tool) to flash the image onto your SD card.
 
 Once flashing is complete, remove and reinsert the SD card into your computer.
 
-3. Configure Wi-Fi on Startup
+### Configure Wi-Fi on Startup
 Open the boot folder on the SD card (it should be visible on macOS since it is formatted as FAT32).
 Create a new file named wpa_supplicant.conf in the boot folder and add the following content:
 
@@ -30,7 +34,7 @@ network={
 ```
 Replace YOURWIFINAME and YOURPASSWORD with your Wi-Fi credentials.
 
-3. Connect via USB
+### Connect via USB
 If you're connecting via USB, use the following details:
 
 - IP Address: 192.168.42.1
@@ -40,13 +44,8 @@ If you're connecting via USB, use the following details:
 SSH:
 `ssh root@192.168.42.1`
 
-
 If there's a keygen issue:
 `ssh-keygen -R 192.168.42.1`
-
-
-
-
-If the board is connected over usb, ip is `192.168.42.1`
+</Steps>
 
 
