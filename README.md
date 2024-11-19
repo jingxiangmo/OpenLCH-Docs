@@ -1,32 +1,10 @@
-# OpenLCH 
+# Zeroth Robotics Documentation
 
+This is where all our documentation is hosted, along with guides and other projects.
 
-## Local Development
+This project is built with [Nextra](https://nextra.site/). To run it locally, clone the repo and run:
 
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.]
-
-
-## Important!
-
-To add components, use:
-
+```bash
+pnpm install
+pnpm run dev
 ```
-import { Callout } from 'nextra-theme-docs'
-```
-
-to import from nextra-theme-docs instead of documentation.
-
-
-Note that there are Vercel deployment issues with caching. 
-
-Please add ```VERCEL_DEEP_CLONE=true``` to Vercel environment variables. 
-
-https://github.com/orgs/vercel/discussions/2079
-
-
-
-## License
-
-This project is licensed under the MIT License.

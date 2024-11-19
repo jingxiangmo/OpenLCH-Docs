@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout, Steps } from 'nextra/components'
 import Image from 'next/image'
 
 <Callout type="warning" emoji="⚠️">
@@ -6,99 +6,163 @@ This documentation is under construction and incomplete.
 </Callout>
 
 # Assembly Guide
+<Callout type="error" emoji="🚫">
+Public Alpha. Zeroth-01 Bot is available for basic demos, please expect breaking changes until 1.0 is reached.
+</Callout>
+**Notes:**
 
-- All screws should have spring washers on them to prevent loosening. Especially on legs and hips
+- All screws should have spring washers to prevent loosening, especially on legs and hips.
+- Use an **M3x8 screw** for the middle screw on every servo.
 
-1. Remove supports, prepare components for assembly
+---
+
+<Steps>
+
+### 1. Prepare Components
+
+- Remove all supports and prepare components for assembly.
+
+<Image src="/assemble/IMG_3512.webp" alt="Component preparation" width={384} height={288} />
+
+### 2. Assemble Ankle Pitch Servos to Feet
+
+- Connect the left and right ankle **pitch servos** to the feet.
 
 <div className="grid grid-cols-2 gap-4">
-  <Image src="/assemble/IMG_3512.webp" alt="Component preparation" width={384} height={288} />
+  <Image src="/assemble/IMG_3525.webp" alt="Connecting ankle pitch servos - Step 1" width={288} height={216} />
+  <Image src="/assemble/IMG_3526.webp" alt="Connecting ankle pitch servos - Step 2" width={240} height={180} />
 </div>
 
-# Assembly Guide
+### 3. Attach Servo Casings
 
-2. Put together feet, wire on right foot on right port
+- Secure the servo casings to the ankle pitch servos.
 
-<div className="grid grid-cols-2 gap-4">
-  <Image src="/assemble/IMG_3525.webp" alt="Feet assembly step 1" width={288} height={216} />
-  <Image src="/assemble/IMG_3526.webp" alt="Feet assembly step 2" width={240} height={180} />
-</div>
+<Image src="/assemble/IMG_3529.webp" alt="Attaching servo casings" width={336} height={252} />
 
-3. Add servo casing
+### 4. Install Knee Pitch Servos and Wiring
 
-<Image src="/assemble/IMG_3529.webp" alt="Adding servo casing" width={336} height={252} />
+- Attach the right and left **knee pitch servos** to the assembly.
+- Connect the wire from the right foot to the **left port** of the knee servo.
+- Add a new wire to the **right port** of the knee servo.
+- Repeat for the left leg (mirrored configuration).
 
-4. Add servos, connect wire on right foot to the left port, add new wire to right port
+<Image src="/assemble/IMG_3536.webp" alt="Installing knee pitch servos and wiring" width={336} height={252} />
 
-<Image src="/assemble/IMG_3536.webp" alt="Adding servos and wiring" width={336} height={252} />
+### 5. Assemble Knees and Hip Roll Servos
 
-5. Put together knees
+- Connect knee parts to the right and left knee pitch servos.
+- Attach the left and right **hip roll servos** and the backs of knees/hip yaw connectors.
 
 <div className="grid grid-cols-3 gap-4">
-  <div>
-    <Image src="/assemble/IMG_3540.webp" alt="Knee assembly step 1" width={192} height={144} />
-    <Image src="/assemble/IMG_3541.webp" alt="Knee assembly step 2" width={192} height={144} />
-  </div>
-  <div>
-    <Image src="/assemble/IMG_3556.webp" alt="Knee assembly step 3" width={192} height={144} />
-    <Image src="/assemble/IMG_3559.webp" alt="Knee assembly step 4" width={192} height={144} />
-  </div>
-  <Image src="/assemble/IMG_3547.webp" alt="Knee assembly step 5" width={192} height={144} />
+  <Image src="/assemble/IMG_3541.webp" alt="Knee assembly - Step 1" width={192} height={144} />
+  <Image src="/assemble/IMG_3556.webp" alt="Knee assembly - Step 2" width={192} height={144} />
+  <Image src="/assemble/IMG_3559.webp" alt="Knee assembly - Step 3" width={192} height={144} />
+  <Image src="/assemble/IMG_3547.webp" alt="Knee assembly - Step 4" width={192} height={144} />
 </div>
 
-6. At this point, wire configuration on the right leg should be like below (left wires are mirrored, see step 9)
+### 6. Verify Wiring Configuration
+
+- Ensure the wire configuration on the right leg matches the images below.
+- The left leg wiring should be mirrored accordingly.
 
 <div className="grid grid-cols-2 gap-4">
-  <Image src="/assemble/IMG_3549.webp" alt="Wire configuration right leg" width={480} height={360} />
-  <Image src="/assemble/IMG_3585.webp" alt="Wire configuration detail" width={240} height={180} />
+  <Image src="/assemble/IMG_3549.webp" alt="Right leg wiring configuration" width={480} height={360} />
+  <Image src="/assemble/IMG_3585.webp" alt="Wiring configuration detail" width={240} height={180} />
 </div>
 
-7. Connect hips (these orange plastic pieces) with legs using this red servo. **DO NOT ATTACH THE TORSO CONNECTING SERVOS LIKE I DID IN THE PICTURE**
+### 7. Secure Torso
 
-<div className="flex flex-col gap-4">
-  <Image src="/assemble/IMG_3586.webp" alt="Hip connection step 1" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3588.webp" alt="Hip connection step 2" width={3024} height={2268} />
-</div>
+- Use four **M3x12 screws** and four nuts to secure the torso as shown.
 
-8. Attach top of legs, **DO NOT ATTACH THE TORSO CONNECTING SERVOS LIKE I DID IN THE PICTURE**
+<Image src="/assemble/IMG_3585.webp" alt="Securing the torso" width={240} height={180} />
+
+### 8. Attach Hip Yaw Servos to Legs
+
+- Connect the right and left **hip yaw servos** to the legs and then to the hip connectors.
+- **Important:** Do **not** attach the torso-connecting servos at this point.
+- You should now have two legs with four servos each, **not yet connected to the torso**.
 
 <div className="grid grid-cols-2 gap-4">
-  <Image src="/assemble/IMG_3582.webp" alt="Top leg attachment" width={288} height={216} />
-  <Image src="/assemble/IMG_3574.webp" alt="Leg assembly detail" width={3024} height={2268} />
+  <Image src="/assemble/IMG_3586.webp" alt="Attaching hip yaw servos - Step 1" width={3024} height={2268} />
+  <Image src="/assemble/IMG_3582.webp" alt="Attaching hip yaw servos - Step 2" width={3024} height={2268} />
 </div>
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3575.webp" alt="Assembly step detail 1" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3571.webp" alt="Assembly step detail 2" width={3024} height={2268} />
-</div>
+### 9. Prepare Hip Pitch Servos Wiring
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3572.webp" alt="Assembly step detail 3" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3573.webp" alt="Assembly step detail 4" width={3024} height={2268} />
-</div>
+- Connect a short and a long wire to the **hip pitch servo** that connects to the torso (red-striped servo).
+- **Note:** In the image below, the wires are plugged into the wrong ports; they should be switched.
+- Thread the **long wire** up towards the head.
+- Thread the **short wire** through the back hole to the top thigh.
+- **Important:** Do **not** attach the hip pitch servo to the leg yet, as it will prevent securing it to the torso.
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3576.webp" alt="Assembly step detail 5" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3578.webp" alt="Assembly step detail 6" width={3024} height={2268} />
-</div>
+<Image src="/assemble/IMG_3592.webp" alt="Hip pitch servo wiring" width={3024} height={2268} />
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3587.webp" alt="Assembly step detail 7" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3589.webp" alt="Assembly step detail 8" width={3024} height={2268} />
-</div>
+### 10. Attach Hip Pitch Servos to Torso
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3591.webp" alt="Assembly step detail 9" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3592.webp" alt="Assembly step detail 10" width={3024} height={2268} />
-</div>
+- Secure the right and left hip pitch servos to the torso.
+- **Note:** The orange parts should not be connected to the legs yet.
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3593.webp" alt="Assembly step detail 11" width={4032} height={3024} />
-  <Image src="/assemble/IMG_3595.webp" alt="Assembly step detail 12" width={3024} height={2268} />
-</div>
+<Image src="/assemble/IMG_3587.webp" alt="Attaching hip pitch servos to torso" width={3024} height={2268} />
 
-<div className="grid grid-cols-2 gap-4 mt-4">
-  <Image src="/assemble/IMG_3599.webp" alt="Final assembly detail 1" width={3024} height={2268} />
-  <Image src="/assemble/IMG_3564.webp" alt="Final assembly detail 2" width={4032} height={3024} />
-</div>
+### 11. Connect Legs to Hip Pitch Servos
+
+- Attach the assembled legs to the hip pitch servos.
+- The legs are now securely connected to the torso.
+
+*(Refer to the image from Step 10, now with legs attached.)*
+
+### 12. Install Shoulder Pitch Servos
+
+- Secure the right and left **shoulder pitch servos** (black-striped servos) to the torso.
+
+<Image src="/assemble/IMG_3571.webp" alt="Installing shoulder pitch servos - Step 1" width={3024} height={2268} />
+<Image src="/assemble/IMG_3572.webp" alt="Installing shoulder pitch servos - Step 2" width={3024} height={2268} />
+
+### 13. Attach Shoulders to Torso
+
+- Attach the shoulders onto the torso using screws.
+
+<Image src="/assemble/IMG_3573.webp" alt="Attaching shoulders to torso" width={3024} height={2268} />
+<Image src="/assemble/IMG_3578.webp" alt="Shoulder attachment detail" width={3024} height={2268} />
+
+### 14. Assemble Arms
+
+- Screw together the **shoulder yaw** and **elbow yaw servos** for both arms.
+- The assembled arms should look like the image below.
+
+<Image src="/assemble/IMG_3575.webp" alt="Arm assembly" width={3024} height={2268} />
+
+### 15. Attach Shoulder Yaw Servos to Shoulders
+
+- Connect the shoulder yaw servos to the shoulders.
+
+<Image src="/assemble/IMG_3589.webp" alt="Attaching shoulder yaw servos" width={3024} height={2268} />
+
+### 16. Connect Wiring for Shoulder Servos
+
+- Connect **long wires** to the body-side port on the shoulder yaw servos.
+- Thread the wires through the holes towards the head.
+
+<Image src="/assemble/IMG_3595.webp" alt="Shoulder servo wiring" width={3024} height={2268} />
+<Image src="/assemble/IMG_3593.webp" alt="Shoulder wiring detail" width={3024} height={2268} />
+
+### 17. Connect Elbow Yaw Servos
+
+- Connect **shorter wires** from the unused port on the shoulder yaw servo to the corresponding port on the elbow yaw servo.
+
+### 18. Attach Hands
+
+- Attach the hands to the ends of the arms.
+
+### 19. Final Assembly
+
+- Your robot should now look like the image below.
+
+<Image src="/assemble/IMG_3599.webp" alt="Final assembled robot" width={3024} height={2268} />
+
+</Steps>
+
+---
+
+This completes the assembly of the robot. Ensure all connections are secure, and all screws are tightened with spring washers in place.
 
