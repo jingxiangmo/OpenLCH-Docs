@@ -1,4 +1,4 @@
-{
+export default {
   "index": "HOME",
   "build": "GET STARTED",
   "sdk": "SOFTWARE SDK",

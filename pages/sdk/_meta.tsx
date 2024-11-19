@@ -1,4 +1,4 @@
-{
+export default {
   "python-library": "Python Library",
   "api": {
     "title": "APIs",

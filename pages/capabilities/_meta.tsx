@@ -1,4 +1,4 @@
-{
+export default {
   "vision": "Vision",
   "speech": "Speech",
   "locomotion": "Locomotion",

@@ -1,4 +1,4 @@
-{
+export default {
   "contact": {
     "title": "Isaac Gym",
     "type": "page",

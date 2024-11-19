@@ -1,57 +1,81 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useRouter } from 'next/router';
-import { useConfig } from 'nextra-theme-docs';
+import { useRouter } from "next/router";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
-const siteTitle = 'Zeroth Robotics Docs';
-const siteDescription = 'Powerful, affordable, and open-source robotics platform for builders';
-const siteUrl = 'https://docs.zeroth.bot';
+const siteHost = "docs.zeroth.bot";
+const siteUrl = `https://${siteHost}`;
+const siteSocialUrl = `${siteUrl}/social.png`;
+const siteDesc = `Powerful, affordable, and open-source robotics platform for builders.`;
+const siteTitle = "Zeroth Bot Docs";
 
 const config: DocsThemeConfig = {
   logo: <span>Zeroth Bot Docs</span>,
   project: {
-    link: 'https://github.com/Zeroth-Robotics/OpenLCH',
+    link: "https://github.com/zeroth-robotics/zeroth-bot",
   },
   chat: {
-    link: 'https://discord.gg/G6KP76uha5',
+    link: "https://discord.gg/G6KP76uha5",
   },
-  docsRepositoryBase: 'https://github.com/jingxiangmo/openlch-docs/tree/main',
-  footer: {
-    text: 'made with ❤️ by JX, Denys, Kelsey, and friends',
+  docsRepositoryBase: "https://github.com/zeroth-robotics/docs/tree/main",
+  editLink: {
+    content: "Edit this page on GitHub",
   },
-  head: () => {
-    const { asPath, defaultLocale, locale } = useRouter();
-    const { frontMatter } = useConfig();
-    const url =
-      siteUrl +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
-
+  sidebar: {
+    toggleButton: true,
+    defaultMenuCollapseLevel: 1,
+  },
+  head: function useHead() {
+    const config = useConfig();
+    const { asPath } = useRouter();
     const isIndex = asPath === "/";
-    const title = frontMatter.title || siteTitle;
-    const description = frontMatter.description || siteDescription;
+    const title =
+      config?.title && !isIndex ? `${config.title} - ${siteTitle}` : siteTitle;
 
     return (
       <>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
-        <meta name="description" content={description} />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index,follow" />
 
-        <meta property="og:title" content={title} />
-        <meta name="twitter:title" content={title} />
+        <meta name="description" content={siteDesc} />
+        <meta property="og:description" content={siteDesc} />
+        <meta name="twitter:description" content={siteDesc} />
 
         <meta property="og:site_name" content={siteTitle} />
         <meta name="apple-mobile-web-app-title" content={siteTitle} />
 
-        <meta property="og:url" content={url} />
-        <meta name="twitter:url" content={url} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={siteSocialUrl} />
+        <meta name="og:image" content={siteSocialUrl} />
 
-        <meta name="twitter:card" content="summary" />
+        <meta property="twitter:domain" content={siteHost} />
+        <meta name="twitter:site:domain" content={siteHost} />
 
+        <meta name="twitter:url" content={siteUrl} />
+
+        <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
         <title>{title}</title>
+
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32.png"
+        />
+
+        <style>
+          {`
+          ul.nx-mt-6 {
+            margin-top: 0;
+          }
+          `}
+        </style>
       </>
     );
+  },
+  footer: {
+    component: null,
   },
 };
 
