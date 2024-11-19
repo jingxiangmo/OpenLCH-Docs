@@ -1,5 +1,6 @@
 export default {
-  "index": "HOME",
+  "index": "README",
+  "releases": "RELEASES",
   "build": "GET STARTED",
   "sdk": "SOFTWARE SDK",
   "capabilities": "CAPABILITIES",

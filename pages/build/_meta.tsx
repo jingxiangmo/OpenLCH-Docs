@@ -1,7 +1,7 @@
 export default {
-  "bom": "1. Materials and Components (BoM)",
-  "3d_print": "2. 3D Printing the Parts",
-  "assemble": "3. Robot Assembly Guide",
-  "setup": "4. Image Installation and Setup",
-  "run": "5. RL-based Walking Demo"
+  "bom": "1. Materials and Parts (BoM)",
+  "3d_print": "2. 3D Printing Guide",
+  "assemble": "3. Step-by-Step Assembly",
+  "setup": "4. Software Setup",
+  "run": "5. Testing and First Run"
 }
