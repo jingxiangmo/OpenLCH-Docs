@@ -1,0 +1,14 @@
+.button-small {
+    display: inline-block;
+    width: 14em;
+    height: auto;
+}
+
+.image-actionstep {
+    width: 100%;
+    max-width: 100rem;
+}
+
+.orderedlist-addon {
+    margin-top: 0.5em;
+}
